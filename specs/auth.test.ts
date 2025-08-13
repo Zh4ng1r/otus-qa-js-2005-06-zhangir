@@ -8,6 +8,6 @@ describe('Авторизация', () => {
   });
 
   test('Логин с неверным паролем', async () => {
-    await expect(login(config.bookstoreURL, 'wrongpass')).rejects.toThrow();
+    await expect(login(config.baseURL, 'wrongpass')).rejects.toThrow();
   });
 });
