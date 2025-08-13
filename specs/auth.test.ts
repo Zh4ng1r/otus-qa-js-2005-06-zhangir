@@ -3,11 +3,11 @@ import { login } from '../src/framework/services/authService';
 
 describe('Авторизация', () => {
   test('Успешный логин', async () => {
-    const data = await login(config.credentials.email, config.credentials.password);
+    const data = await login(config.reqresUser.email, config.reqresUser.password);
     expect(data).toHaveProperty('token');
   });
 
   test('Логин с неверным паролем', async () => {
-    await expect(login(config.credentials.email, 'wrongpass')).rejects.toThrow();
+    await expect(login(config.bookstoreURL, 'wrongpass')).rejects.toThrow();
   });
 });
