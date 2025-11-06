@@ -1,6 +1,15 @@
-export const preset = 'ts-jest';
-export const testEnvironment = 'node';
-export const transform = {
-  '^.+\\.(ts|tsx)$': 'ts-jest',
+export default {
+  testEnvironment: 'node',
+  reporters: [
+    'default',
+    [
+      'jest-html-reporter',
+      {
+        pageTitle: 'Test Report',
+        outputPath: 'reports/test-report.html',
+        includeFailureMsg: true,
+        includeConsoleLog: true,
+      },
+    ],
+  ],
 };
-export const moduleFileExtensions = ['ts', 'tsx', 'js', 'json'];
