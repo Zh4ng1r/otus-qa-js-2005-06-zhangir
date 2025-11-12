@@ -3,7 +3,7 @@ name: Jest Report CI
 on:
   push:
     branches:
-      - main
+      - master
       - feature/*
   pull_request:
 
