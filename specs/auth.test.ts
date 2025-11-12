@@ -5,6 +5,8 @@ describe('Авторизация', () => {
   test('Успешный логин', async () => {
     const data = await login(config.credentials.email, config.credentials.password);
     expect(data).toHaveProperty('token');
+    expect(data).toHaveProperty('user');
+    expect(data.user).toHaveProperty('email', config.credentials.email);
   });
 
   test('Логин с неверным паролем', async () => {
