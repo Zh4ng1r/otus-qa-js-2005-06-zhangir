@@ -1,6 +1,13 @@
-export const preset = 'ts-jest';
 export const testEnvironment = 'node';
-export const transform = {
-  '^.+\\.(ts|tsx)$': 'ts-jest',
-};
-export const moduleFileExtensions = ['ts', 'tsx', 'js', 'json'];
+export const reporters = [
+  'default',
+  [
+    'jest-html-reporter',
+    {
+      pageTitle: 'Test Report',
+      outputPath: 'reports/test-report.html',
+      includeFailureMsg: true,
+      includeSuiteFailure: true,
+    },
+  ],
+];
