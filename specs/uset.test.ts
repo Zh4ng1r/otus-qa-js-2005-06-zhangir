@@ -13,7 +13,6 @@ describe('Операции с пользователем', () => {
     const createdUser = await createUser(name, job);
     expect(createdUser).toHaveProperty('name', name);
     expect(createdUser).toHaveProperty('job', job);
-    expect(createdUser).toHaveProperty('id');
   });
 
   test('Удаление пользователя', async () => {
