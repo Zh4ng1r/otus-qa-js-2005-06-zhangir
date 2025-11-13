@@ -48,3 +48,6 @@ tsconfig.tsbuildinfo
 # Misc
 .tmp
 temp
+
+# Reporters 
+/reports
