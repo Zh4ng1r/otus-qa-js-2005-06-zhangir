@@ -51,3 +51,7 @@ temp
 
 # Reporters 
 /reports
+
+#Playwright 
+/playwright-report
+/test-results
