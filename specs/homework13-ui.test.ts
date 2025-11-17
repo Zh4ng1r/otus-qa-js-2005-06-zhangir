@@ -4,8 +4,6 @@ import { InventoryPage } from '../src/framework/pages/InventoryPage';
 import { CartPage } from '../src/framework/pages/CartPage';
 import { CheckoutYourInfoPage, CheckoutOverviewPage } from '../src/framework/pages/CheckoutPages';
 
-// Сайт: https://www.saucedemo.com
-
 test.describe('HW13 — Page Object tests (saucedemo)', () => {
   test('1) Успешный логин и выход (login -> inventory -> logout)', async ({ page }) => {
     const login = new LoginPage(page);
